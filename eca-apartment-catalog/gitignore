@@ -1,0 +1,50 @@
+### Eclipse
+.classpath
+.project
+.settings/
+tmp/
+*.tmp
+*.bak
+*.swp
+.target
+.springBeans
+ 
+### Intellij
+.idea/
+*.iml
+*.iws
+/bin/
+/build/
+/out/
+.idea_modules/
+ 
+# Mac
+.DS_Store
+ 
+# Maven
+log/
+target/
+!/.mvn/wrapper/maven-wrapper.jar
+
+### Java template
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Gradle
+gradle-local.properties
+gradle/**
+gradlew*
+!/gradle/wrapper/gradle-wrapper.jar
+
+### Don' ignore anything in main and test source folders
+!**/src/main/**
+!**/src/test/**
+
+### TestNG
+/test-output/
