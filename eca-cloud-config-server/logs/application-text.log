@@ -1,0 +1,54 @@
+[INFO ] 2023-06-05 15:31:46.055 [main]  c.e.c.EcaApartmentCatalogApplication - Starting EcaApartmentCatalogApplication using Java 11.0.18 on DESKTOP-V4J4I06 with PID 12744 (C:\projects\eca\eca-apartment-catalog\target\classes started by mhirf in C:\projects\eca\eca-cloud-config-server)
+[INFO ] 2023-06-05 15:31:46.125 [main]  c.e.c.EcaApartmentCatalogApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2023-06-05 15:31:52.133 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2023-06-05 15:31:52.796 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 613 ms. Found 1 JPA repository interfaces.
+[INFO ] 2023-06-05 15:31:54.171 [main]  o.s.c.c.s.GenericScope - BeanFactory id=89bcacc1-0a54-3cd3-8290-240487878d9e
+[INFO ] 2023-06-05 15:31:58.192 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[INFO ] 2023-06-05 15:31:58.236 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
+[INFO ] 2023-06-05 15:31:58.237 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
+[INFO ] 2023-06-05 15:31:59.100 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2023-06-05 15:31:59.101 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 12630 ms
+[INFO ] 2023-06-05 15:32:00.308 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2023-06-05 15:32:00.986 [main]  o.h.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO ] 2023-06-05 15:32:01.614 [main]  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2023-06-05 15:32:05.402 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2023-06-05 15:32:10.617 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2023-06-05 15:32:10.876 [main]  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[INFO ] 2023-06-05 15:32:14.578 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2023-06-05 15:32:14.633 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[WARN ] 2023-06-05 15:32:16.657 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2023-06-05 15:32:27.026 [main]  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[WARN ] 2023-06-05 15:32:28.480 [main]  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2023-06-05 15:32:28.518 [main]  o.s.b.a.e.w.EndpointLinksResolver - Exposing 18 endpoint(s) beneath base path '/actuator'
+[INFO ] 2023-06-05 15:32:28.933 [main]  o.s.c.n.e.InstanceInfoFactory - Setting initial instance status as: STARTING
+[INFO ] 2023-06-05 15:32:32.817 [main]  c.n.d.DiscoveryClient - Initializing Eureka in region us-east-1
+[INFO ] 2023-06-05 15:32:32.929 [main]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[INFO ] 2023-06-05 15:32:33.061 [main]  c.n.d.DiscoveryClient - Disable delta property : false
+[INFO ] 2023-06-05 15:32:33.061 [main]  c.n.d.DiscoveryClient - Single vip registry refresh property : null
+[INFO ] 2023-06-05 15:32:33.062 [main]  c.n.d.DiscoveryClient - Force full registry fetch : false
+[INFO ] 2023-06-05 15:32:33.062 [main]  c.n.d.DiscoveryClient - Application is null : false
+[INFO ] 2023-06-05 15:32:33.063 [main]  c.n.d.DiscoveryClient - Registered Applications size is zero : true
+[INFO ] 2023-06-05 15:32:33.063 [main]  c.n.d.DiscoveryClient - Application version is -1: true
+[INFO ] 2023-06-05 15:32:33.063 [main]  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
+[INFO ] 2023-06-05 15:32:35.659 [main]  c.n.d.DiscoveryClient - The response status is 200
+[INFO ] 2023-06-05 15:32:35.688 [main]  c.n.d.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+[INFO ] 2023-06-05 15:32:35.712 [main]  c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+[INFO ] 2023-06-05 15:32:35.775 [main]  c.n.d.DiscoveryClient - Discovery Client initialized at timestamp 1685959355723 with initial instances count: 1
+[INFO ] 2023-06-05 15:32:35.779 [main]  o.s.c.n.e.s.EurekaServiceRegistry - Registering application CATALOG-SERVICE with eureka with status UP
+[INFO ] 2023-06-05 15:32:35.781 [main]  c.n.d.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1685959355781, current=UP, previous=STARTING]
+[INFO ] 2023-06-05 15:32:35.785 [DiscoveryClient-InstanceInfoReplicator-0]  c.n.d.DiscoveryClient - DiscoveryClient_CATALOG-SERVICE/host.docker.internal:catalog-service: registering service...
+[INFO ] 2023-06-05 15:32:37.557 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[INFO ] 2023-06-05 15:32:37.564 [main]  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
+[INFO ] 2023-06-05 15:32:38.354 [DiscoveryClient-InstanceInfoReplicator-0]  c.n.d.DiscoveryClient - DiscoveryClient_CATALOG-SERVICE/host.docker.internal:catalog-service - registration status: 204
+[INFO ] 2023-06-05 15:32:38.420 [main]  c.e.c.EcaApartmentCatalogApplication - Started EcaApartmentCatalogApplication in 57.23 seconds (JVM running for 63.579)
+[INFO ] 2023-06-05 15:33:48.906 [SpringApplicationShutdownHook]  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application CATALOG-SERVICE with eureka with status DOWN
+[INFO ] 2023-06-05 15:33:48.908 [SpringApplicationShutdownHook]  c.n.d.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1685959428908, current=DOWN, previous=UP]
+[INFO ] 2023-06-05 15:33:48.909 [DiscoveryClient-InstanceInfoReplicator-0]  c.n.d.DiscoveryClient - DiscoveryClient_CATALOG-SERVICE/host.docker.internal:catalog-service: registering service...
+[INFO ] 2023-06-05 15:33:49.033 [DiscoveryClient-InstanceInfoReplicator-0]  c.n.d.DiscoveryClient - DiscoveryClient_CATALOG-SERVICE/host.docker.internal:catalog-service - registration status: 204
+[INFO ] 2023-06-05 15:33:50.094 [SpringApplicationShutdownHook]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2023-06-05 15:33:50.230 [SpringApplicationShutdownHook]  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2023-06-05 15:33:50.274 [SpringApplicationShutdownHook]  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO ] 2023-06-05 15:33:50.278 [SpringApplicationShutdownHook]  c.n.d.DiscoveryClient - Shutting down DiscoveryClient ...
+[INFO ] 2023-06-05 15:33:53.292 [SpringApplicationShutdownHook]  c.n.d.DiscoveryClient - Unregistering ...
+[INFO ] 2023-06-05 15:33:57.722 [SpringApplicationShutdownHook]  c.n.d.DiscoveryClient - DiscoveryClient_CATALOG-SERVICE/host.docker.internal:catalog-service - deregister  status: 200
+[INFO ] 2023-06-05 15:33:57.753 [SpringApplicationShutdownHook]  c.n.d.DiscoveryClient - Completed shut down of DiscoveryClient

@@ -29,7 +29,5 @@ public class AddressDto {
 	private String countryName;
 	
 	private String contactDetails;
-	
-	
 
 }
