@@ -1,0 +1,5 @@
+eureka:
+  server:
+    renewalPercentThreshold: ${EUREKA_RENEW_THRESHOLD:0.49}
+    renewalThresholdUpdateIntervalMs: ${EUREKA_RENEW_THRESHOLD_PERIOD:30001}
+    waitTimeInMsWhenSyncEmpty: 0
