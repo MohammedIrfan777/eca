@@ -12,6 +12,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AddressDto {
+
+	private Long addressId;
 	
 	@NotBlank
 	private String streetName;

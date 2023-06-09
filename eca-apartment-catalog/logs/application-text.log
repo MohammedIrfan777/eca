@@ -1,63 +1,316 @@
-[WARN ] 2023-06-05 10:52:00.753 [HikariPool-1 housekeeper]  c.z.h.p.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16h34m37s466ms709µs300ns).
-[INFO ] 2023-06-05 10:52:38.574 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 10:57:38.638 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 11:33:46.195 [main]  c.e.c.EcaApartmentCatalogApplication - Starting EcaApartmentCatalogApplication using Java 11.0.18 on DESKTOP-V4J4I06 with PID 4996 (C:\projects\eca\eca-apartment-catalog\target\classes started by mhirf in C:\projects\eca\eca-apartment-catalog)
-[INFO ] 2023-06-05 11:33:46.241 [main]  c.e.c.EcaApartmentCatalogApplication - No active profile set, falling back to 1 default profile: "default"
-[INFO ] 2023-06-05 11:33:47.937 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 2023-06-05 11:33:48.100 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 151 ms. Found 1 JPA repository interfaces.
-[INFO ] 2023-06-05 11:33:48.501 [main]  o.s.c.c.s.GenericScope - BeanFactory id=6f744675-1388-38da-8351-2eaea815bd25
-[INFO ] 2023-06-05 11:33:49.232 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-[INFO ] 2023-06-05 11:33:49.244 [main]  o.a.c.c.StandardService - Starting service [Tomcat]
-[INFO ] 2023-06-05 11:33:49.245 [main]  o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.75]
-[INFO ] 2023-06-05 11:33:49.476 [main]  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 2023-06-05 11:33:49.476 [main]  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3158 ms
-[INFO ] 2023-06-05 11:33:49.896 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO ] 2023-06-05 11:33:50.069 [main]  o.h.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
-[INFO ] 2023-06-05 11:33:50.710 [main]  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 2023-06-05 11:33:51.022 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 2023-06-05 11:33:51.926 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 2023-06-05 11:33:52.030 [main]  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-[INFO ] 2023-06-05 11:33:54.310 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 2023-06-05 11:33:54.337 [main]  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[WARN ] 2023-06-05 11:33:55.104 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 2023-06-05 11:34:00.087 [main]  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
-[WARN ] 2023-06-05 11:34:00.182 [main]  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-[INFO ] 2023-06-05 11:34:00.191 [main]  o.s.b.a.e.w.EndpointLinksResolver - Exposing 18 endpoint(s) beneath base path '/actuator'
-[INFO ] 2023-06-05 11:34:00.333 [main]  o.s.c.n.e.InstanceInfoFactory - Setting initial instance status as: STARTING
-[INFO ] 2023-06-05 11:34:02.617 [main]  c.n.d.DiscoveryClient - Initializing Eureka in region us-east-1
-[INFO ] 2023-06-05 11:34:02.629 [main]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 11:34:03.536 [main]  c.n.d.DiscoveryClient - Disable delta property : false
-[INFO ] 2023-06-05 11:34:03.537 [main]  c.n.d.DiscoveryClient - Single vip registry refresh property : null
-[INFO ] 2023-06-05 11:34:03.538 [main]  c.n.d.DiscoveryClient - Force full registry fetch : false
-[INFO ] 2023-06-05 11:34:03.539 [main]  c.n.d.DiscoveryClient - Application is null : false
-[INFO ] 2023-06-05 11:34:03.539 [main]  c.n.d.DiscoveryClient - Registered Applications size is zero : true
-[INFO ] 2023-06-05 11:34:03.540 [main]  c.n.d.DiscoveryClient - Application version is -1: true
-[INFO ] 2023-06-05 11:34:03.541 [main]  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
-[INFO ] 2023-06-05 11:34:04.646 [main]  c.n.d.DiscoveryClient - The response status is 200
-[INFO ] 2023-06-05 11:34:04.649 [main]  c.n.d.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
-[INFO ] 2023-06-05 11:34:04.654 [main]  c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
-[INFO ] 2023-06-05 11:34:04.661 [main]  c.n.d.DiscoveryClient - Discovery Client initialized at timestamp 1685945044660 with initial instances count: 0
-[INFO ] 2023-06-05 11:34:04.665 [main]  o.s.c.n.e.s.EurekaServiceRegistry - Registering application CATALOG-SERVICE with eureka with status UP
-[INFO ] 2023-06-05 11:34:04.666 [main]  c.n.d.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1685945044666, current=UP, previous=STARTING]
-[INFO ] 2023-06-05 11:34:04.669 [DiscoveryClient-InstanceInfoReplicator-0]  c.n.d.DiscoveryClient - DiscoveryClient_CATALOG-SERVICE/host.docker.internal:catalog-service: registering service...
-[INFO ] 2023-06-05 11:34:04.717 [main]  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-[INFO ] 2023-06-05 11:34:04.720 [main]  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8080
-[INFO ] 2023-06-05 11:34:04.937 [DiscoveryClient-InstanceInfoReplicator-0]  c.n.d.DiscoveryClient - DiscoveryClient_CATALOG-SERVICE/host.docker.internal:catalog-service - registration status: 204
-[INFO ] 2023-06-05 11:34:05.074 [main]  c.e.c.EcaApartmentCatalogApplication - Started EcaApartmentCatalogApplication in 19.738 seconds (JVM running for 31.474)
-[INFO ] 2023-06-05 11:34:34.658 [DiscoveryClient-CacheRefreshExecutor-0]  c.n.d.DiscoveryClient - Disable delta property : false
-[INFO ] 2023-06-05 11:34:34.663 [DiscoveryClient-CacheRefreshExecutor-0]  c.n.d.DiscoveryClient - Single vip registry refresh property : null
-[INFO ] 2023-06-05 11:34:34.663 [DiscoveryClient-CacheRefreshExecutor-0]  c.n.d.DiscoveryClient - Force full registry fetch : false
-[INFO ] 2023-06-05 11:34:34.664 [DiscoveryClient-CacheRefreshExecutor-0]  c.n.d.DiscoveryClient - Application is null : false
-[INFO ] 2023-06-05 11:34:34.665 [DiscoveryClient-CacheRefreshExecutor-0]  c.n.d.DiscoveryClient - Registered Applications size is zero : true
-[INFO ] 2023-06-05 11:34:34.667 [DiscoveryClient-CacheRefreshExecutor-0]  c.n.d.DiscoveryClient - Application version is -1: false
-[INFO ] 2023-06-05 11:34:34.667 [DiscoveryClient-CacheRefreshExecutor-0]  c.n.d.DiscoveryClient - Getting all instance registry info from the eureka server
-[INFO ] 2023-06-05 11:34:34.700 [DiscoveryClient-CacheRefreshExecutor-0]  c.n.d.DiscoveryClient - The response status is 200
-[INFO ] 2023-06-05 11:39:03.555 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 11:44:03.565 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 11:49:03.581 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 11:54:03.592 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 11:59:03.604 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 12:04:03.619 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 12:09:03.629 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 12:14:03.646 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
-[INFO ] 2023-06-05 12:19:03.662 [AsyncResolver-bootstrap-executor-0]  c.n.d.s.r.a.ConfigClusterResolver - Resolving eureka endpoints via configuration
+[INFO ] 2023-06-10 00:47:46.000 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.eca.catalog.EcaApartmentCatalogApplicationTests], using SpringBootContextLoader
+[INFO ] 2023-06-10 00:47:46.911 [main]  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.eca.catalog.EcaApartmentCatalogApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 2023-06-10 00:47:46.923 [main]  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.eca.catalog.EcaApartmentCatalogApplicationTests]: EcaApartmentCatalogApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 2023-06-10 00:47:52.816 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.eca.catalog.EcaApartmentCatalogApplication for test class com.eca.catalog.EcaApartmentCatalogApplicationTests
+[INFO ] 2023-06-10 00:47:54.469 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 2023-06-10 00:47:58.112 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@59cda16e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5dd903be, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@12e0f1cb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4a163575, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7e642b88, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6b350309, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7ecec90d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@588f63c, org.springframework.test.context.event.EventPublishingTestExecutionListener@5a6fa56e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1981d861, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@118ffcfd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@53f4c1e6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@74174a23, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6342d610, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@dc4a691]
+[INFO ] 2023-06-10 00:48:03.925 [main]  c.e.c.EcaApartmentCatalogApplicationTests - Starting EcaApartmentCatalogApplicationTests using Java 11.0.18 on DESKTOP-V4J4I06 with PID 13656 (started by mhirf in C:\ELK-WS\eca-program\eca-apartment-catalog)
+[INFO ] 2023-06-10 00:48:03.929 [main]  c.e.c.EcaApartmentCatalogApplicationTests - The following 1 profile is active: "dev"
+[INFO ] 2023-06-10 00:48:11.174 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2023-06-10 00:48:11.875 [main]  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 671 ms. Found 2 JPA repository interfaces.
+[INFO ] 2023-06-10 00:48:13.805 [main]  o.s.c.c.s.GenericScope - BeanFactory id=19b3fc6e-e0af-3a97-857d-5c68a400b6a7
+[INFO ] 2023-06-10 00:48:15.804 [main]  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2023-06-10 00:48:18.458 [main]  c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2023-06-10 00:48:18.929 [main]  o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2023-06-10 00:48:19.879 [main]  o.h.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO ] 2023-06-10 00:48:21.900 [main]  o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[DEBUG] 2023-06-10 00:48:22.418 [main]  o.h.t.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@69926b6e
+[DEBUG] 2023-06-10 00:48:22.419 [main]  o.h.t.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@69926b6e
+[DEBUG] 2023-06-10 00:48:22.420 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@69926b6e
+[DEBUG] 2023-06-10 00:48:22.421 [main]  o.h.t.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@180e33b0
+[DEBUG] 2023-06-10 00:48:22.423 [main]  o.h.t.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@11896124
+[DEBUG] 2023-06-10 00:48:22.425 [main]  o.h.t.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@5b86f4cb
+[DEBUG] 2023-06-10 00:48:22.427 [main]  o.h.t.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@46051269
+[DEBUG] 2023-06-10 00:48:22.428 [main]  o.h.t.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@46051269
+[DEBUG] 2023-06-10 00:48:22.428 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@46051269
+[DEBUG] 2023-06-10 00:48:22.430 [main]  o.h.t.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@61d24347
+[DEBUG] 2023-06-10 00:48:22.430 [main]  o.h.t.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@61d24347
+[DEBUG] 2023-06-10 00:48:22.431 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@61d24347
+[DEBUG] 2023-06-10 00:48:22.434 [main]  o.h.t.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@3331800f
+[DEBUG] 2023-06-10 00:48:22.434 [main]  o.h.t.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@3331800f
+[DEBUG] 2023-06-10 00:48:22.435 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@3331800f
+[DEBUG] 2023-06-10 00:48:22.437 [main]  o.h.t.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@4880a9d
+[DEBUG] 2023-06-10 00:48:22.437 [main]  o.h.t.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@4880a9d
+[DEBUG] 2023-06-10 00:48:22.438 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@4880a9d
+[DEBUG] 2023-06-10 00:48:22.440 [main]  o.h.t.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2119b989
+[DEBUG] 2023-06-10 00:48:22.441 [main]  o.h.t.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2119b989
+[DEBUG] 2023-06-10 00:48:22.441 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@2119b989
+[DEBUG] 2023-06-10 00:48:22.443 [main]  o.h.t.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@152d2a58
+[DEBUG] 2023-06-10 00:48:22.444 [main]  o.h.t.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@152d2a58
+[DEBUG] 2023-06-10 00:48:22.445 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@152d2a58
+[DEBUG] 2023-06-10 00:48:22.447 [main]  o.h.t.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7c07023
+[DEBUG] 2023-06-10 00:48:22.447 [main]  o.h.t.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@7c07023
+[DEBUG] 2023-06-10 00:48:22.447 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@7c07023
+[DEBUG] 2023-06-10 00:48:22.450 [main]  o.h.t.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@396c1228
+[DEBUG] 2023-06-10 00:48:22.450 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@396c1228
+[DEBUG] 2023-06-10 00:48:22.452 [main]  o.h.t.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@32f45e15
+[DEBUG] 2023-06-10 00:48:22.453 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@32f45e15
+[DEBUG] 2023-06-10 00:48:22.455 [main]  o.h.t.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@4e481512
+[DEBUG] 2023-06-10 00:48:22.456 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@4e481512
+[DEBUG] 2023-06-10 00:48:22.457 [main]  o.h.t.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@5ca3acad
+[DEBUG] 2023-06-10 00:48:22.458 [main]  o.h.t.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@1477d4e6
+[DEBUG] 2023-06-10 00:48:22.461 [main]  o.h.t.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@48da5106
+[DEBUG] 2023-06-10 00:48:22.461 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@48da5106
+[DEBUG] 2023-06-10 00:48:22.463 [main]  o.h.t.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@43201f84
+[DEBUG] 2023-06-10 00:48:22.463 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@43201f84
+[DEBUG] 2023-06-10 00:48:22.466 [main]  o.h.t.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@58fbfefb
+[DEBUG] 2023-06-10 00:48:22.466 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@58fbfefb
+[DEBUG] 2023-06-10 00:48:22.468 [main]  o.h.t.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@33060020
+[DEBUG] 2023-06-10 00:48:22.469 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@33060020
+[DEBUG] 2023-06-10 00:48:22.471 [main]  o.h.t.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@70f3bf00
+[DEBUG] 2023-06-10 00:48:22.471 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@70f3bf00
+[DEBUG] 2023-06-10 00:48:22.473 [main]  o.h.t.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@87f1201
+[DEBUG] 2023-06-10 00:48:22.473 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@87f1201
+[DEBUG] 2023-06-10 00:48:22.475 [main]  o.h.t.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@236f3885
+[DEBUG] 2023-06-10 00:48:22.476 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@236f3885
+[DEBUG] 2023-06-10 00:48:22.478 [main]  o.h.t.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@5f2ad3d5
+[DEBUG] 2023-06-10 00:48:22.479 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@5f2ad3d5
+[DEBUG] 2023-06-10 00:48:22.482 [main]  o.h.t.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@75df4b1d
+[DEBUG] 2023-06-10 00:48:22.482 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@75df4b1d
+[DEBUG] 2023-06-10 00:48:22.511 [main]  o.h.t.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@8ad6d29
+[DEBUG] 2023-06-10 00:48:22.512 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@8ad6d29
+[DEBUG] 2023-06-10 00:48:22.515 [main]  o.h.t.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@34ab398b
+[DEBUG] 2023-06-10 00:48:22.516 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@34ab398b
+[DEBUG] 2023-06-10 00:48:22.518 [main]  o.h.t.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@33845e3d
+[DEBUG] 2023-06-10 00:48:22.519 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@33845e3d
+[DEBUG] 2023-06-10 00:48:22.519 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@33845e3d
+[DEBUG] 2023-06-10 00:48:22.522 [main]  o.h.t.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@32f54c2a
+[DEBUG] 2023-06-10 00:48:22.524 [main]  o.h.t.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@3bf41cd0
+[DEBUG] 2023-06-10 00:48:22.525 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@3bf41cd0
+[DEBUG] 2023-06-10 00:48:22.525 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@3bf41cd0
+[DEBUG] 2023-06-10 00:48:22.527 [main]  o.h.t.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@37b1218
+[DEBUG] 2023-06-10 00:48:22.529 [main]  o.h.t.BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@38394e76
+[DEBUG] 2023-06-10 00:48:22.531 [main]  o.h.t.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@386f88b3
+[DEBUG] 2023-06-10 00:48:22.532 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@386f88b3
+[DEBUG] 2023-06-10 00:48:22.534 [main]  o.h.t.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@16024b49
+[DEBUG] 2023-06-10 00:48:22.534 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@16024b49
+[DEBUG] 2023-06-10 00:48:22.536 [main]  o.h.t.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@2f8ab988
+[DEBUG] 2023-06-10 00:48:22.537 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@2f8ab988
+[DEBUG] 2023-06-10 00:48:22.539 [main]  o.h.t.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@52ba21e4
+[DEBUG] 2023-06-10 00:48:22.539 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@52ba21e4
+[DEBUG] 2023-06-10 00:48:22.541 [main]  o.h.t.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@6a7ab205
+[DEBUG] 2023-06-10 00:48:22.542 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@6a7ab205
+[DEBUG] 2023-06-10 00:48:22.543 [main]  o.h.t.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@341df373
+[DEBUG] 2023-06-10 00:48:22.546 [main]  o.h.t.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@589d831e
+[DEBUG] 2023-06-10 00:48:22.546 [main]  o.h.t.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@589d831e
+[DEBUG] 2023-06-10 00:48:22.547 [main]  o.h.t.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@589d831e
+[DEBUG] 2023-06-10 00:48:22.550 [main]  o.h.t.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@2b30b627
+[DEBUG] 2023-06-10 00:48:22.550 [main]  o.h.t.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@2b30b627
+[DEBUG] 2023-06-10 00:48:22.551 [main]  o.h.t.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@2b30b627
+[DEBUG] 2023-06-10 00:48:22.553 [main]  o.h.t.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@7e017f47
+[DEBUG] 2023-06-10 00:48:22.555 [main]  o.h.t.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@68cb8e52
+[DEBUG] 2023-06-10 00:48:22.558 [main]  o.h.t.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@747f0f34
+[DEBUG] 2023-06-10 00:48:22.558 [main]  o.h.t.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@747f0f34
+[DEBUG] 2023-06-10 00:48:22.559 [main]  o.h.t.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@747f0f34
+[DEBUG] 2023-06-10 00:48:22.561 [main]  o.h.t.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@10280879
+[DEBUG] 2023-06-10 00:48:22.562 [main]  o.h.t.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@10280879
+[DEBUG] 2023-06-10 00:48:22.562 [main]  o.h.t.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@10280879
+[DEBUG] 2023-06-10 00:48:22.563 [main]  o.h.t.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@4f1f2f84
+[DEBUG] 2023-06-10 00:48:22.565 [main]  o.h.t.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@14b4d90b
+[DEBUG] 2023-06-10 00:48:22.568 [main]  o.h.t.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@406decb2
+[DEBUG] 2023-06-10 00:48:22.569 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@406decb2
+[DEBUG] 2023-06-10 00:48:22.571 [main]  o.h.t.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@c3ca482
+[DEBUG] 2023-06-10 00:48:22.574 [main]  o.h.t.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@1a45e29f
+[DEBUG] 2023-06-10 00:48:22.575 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1a45e29f
+[DEBUG] 2023-06-10 00:48:22.578 [main]  o.h.t.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@1e3a2177
+[DEBUG] 2023-06-10 00:48:22.579 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@1e3a2177
+[DEBUG] 2023-06-10 00:48:22.580 [main]  o.h.t.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@582b14e2
+[DEBUG] 2023-06-10 00:48:22.581 [main]  o.h.t.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@2a525f88
+[DEBUG] 2023-06-10 00:48:22.585 [main]  o.h.t.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@15651402
+[DEBUG] 2023-06-10 00:48:22.612 [main]  o.h.t.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@17ebbf1e
+[DEBUG] 2023-06-10 00:48:22.612 [main]  o.h.t.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@17ebbf1e
+[DEBUG] 2023-06-10 00:48:22.614 [main]  o.h.t.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@4c6fabba
+[DEBUG] 2023-06-10 00:48:22.614 [main]  o.h.t.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@3f2ab6ec
+[DEBUG] 2023-06-10 00:48:22.614 [main]  o.h.t.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@1f1e15de
+[DEBUG] 2023-06-10 00:48:22.615 [main]  o.h.t.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@2ea0161f
+[DEBUG] 2023-06-10 00:48:22.615 [main]  o.h.t.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@1f235a0a
+[DEBUG] 2023-06-10 00:48:22.616 [main]  o.h.t.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@75d402d4
+[DEBUG] 2023-06-10 00:48:22.616 [main]  o.h.t.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1a0b4955
+[DEBUG] 2023-06-10 00:48:22.616 [main]  o.h.t.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@3435a4e5
+[INFO ] 2023-06-10 00:48:22.899 [main]  o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[DEBUG] 2023-06-10 00:48:23.018 [main]  o.h.t.s.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@6aaf1ce8] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@6f26e775]
+[DEBUG] 2023-06-10 00:48:25.172 [main]  o.h.t.s.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@6aaf1ce8] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@44103266]
+[INFO ] 2023-06-10 00:48:26.271 [main]  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[TRACE] 2023-06-10 00:48:26.313 [main]  o.h.t.s.TypeConfiguration$Scope - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@44103266] for TypeConfiguration
+[WARN ] 2023-06-10 00:48:29.800 [main]  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2023-06-10 00:48:31.664 [main]  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ecacatalog'
+[INFO ] 2023-06-10 00:48:44.045 [main]  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+[WARN ] 2023-06-10 00:48:44.644 [main]  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+[INFO ] 2023-06-10 00:48:44.728 [main]  o.s.b.a.e.w.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
+[INFO ] 2023-06-10 00:48:44.898 [main]  c.e.c.EcaApartmentCatalogApplicationTests - Started EcaApartmentCatalogApplicationTests in 44.856 seconds (JVM running for 86.208)
+[INFO ] 2023-06-10 00:48:45.739 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.eca.catalog.CatalogControllerTest], using SpringBootContextLoader
+[INFO ] 2023-06-10 00:48:45.743 [main]  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.eca.catalog.CatalogControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 2023-06-10 00:48:45.745 [main]  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.eca.catalog.CatalogControllerTest]: CatalogControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 2023-06-10 00:48:45.750 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.eca.catalog.EcaApartmentCatalogApplication for test class com.eca.catalog.CatalogControllerTest
+[INFO ] 2023-06-10 00:48:45.757 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 2023-06-10 00:48:45.758 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@735c0454, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6f475ede, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@353f73ac, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2c47135c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3faadc24, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6acec4a1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@24a26847, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@30eb427c, org.springframework.test.context.event.EventPublishingTestExecutionListener@59c9e3b9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@45bedfed, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7269674d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@187b33de, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@e39df43, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3dcb28de, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4a16325]
+[INFO ] 2023-06-10 00:48:46.315 [main]  c.e.c.c.CatalogController - get the apartment details by id::getApartmentById
+[INFO ] 2023-06-10 00:48:46.371 [main]  c.e.c.c.CatalogController - register new apartment::persistApartments
+[INFO ] 2023-06-10 00:48:46.392 [main]  c.e.c.c.CatalogController - get list  of departments api::getApartments
+[INFO ] 2023-06-10 00:48:46.407 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.eca.catalog.CatalogServiceTest], using SpringBootContextLoader
+[INFO ] 2023-06-10 00:48:46.410 [main]  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.eca.catalog.CatalogServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+[INFO ] 2023-06-10 00:48:46.410 [main]  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.eca.catalog.CatalogServiceTest]: CatalogServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 2023-06-10 00:48:46.414 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.eca.catalog.EcaApartmentCatalogApplication for test class com.eca.catalog.CatalogServiceTest
+[INFO ] 2023-06-10 00:48:46.418 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[INFO ] 2023-06-10 00:48:46.419 [main]  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3ca1a69b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@33dcbbfa, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@57d3c5cd, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5418225f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@65bcc339, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3369a71f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7adde112, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6f422ecc, org.springframework.test.context.event.EventPublishingTestExecutionListener@6c648d16, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@12cb9eda, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@70b38e0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@79414283, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@31857c80, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7ff61924, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2164f202]
+[INFO ] 2023-06-10 00:48:48.338 [main]  c.e.c.s.i.CatalogService - inside the CatalogService::getApartments
+[ERROR] 2023-06-10 00:48:48.751 [main]  c.e.c.s.i.CatalogService - error inside the CatalogService::getApartments
+java.lang.RuntimeException: Exception
+	at com.eca.catalog.service.impl.CatalogService.getApartments(CatalogService.java:41)
+	at com.eca.catalog.CatalogServiceTest.lambda$test_getApartments_valid_exception$0(CatalogServiceTest.java:40)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:55)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:37)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3082)
+	at com.eca.catalog.CatalogServiceTest.test_getApartments_valid_exception(CatalogServiceTest.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+[INFO ] 2023-06-10 00:48:49.131 [main]  c.e.c.s.i.CatalogService - inside the CatalogService::getApartmentById
+[ERROR] 2023-06-10 00:48:49.164 [main]  c.e.c.s.i.CatalogService - error inside the CatalogService::getApartmentById
+java.lang.RuntimeException: Exception
+	at com.eca.catalog.service.impl.CatalogService.getApartmentById(CatalogService.java:70)
+	at com.eca.catalog.CatalogServiceTest.lambda$test_getApartmentById_valid_exception$1(CatalogServiceTest.java:46)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:55)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:37)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3082)
+	at com.eca.catalog.CatalogServiceTest.test_getApartmentById_valid_exception(CatalogServiceTest.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+[INFO ] 2023-06-10 00:48:49.463 [SpringApplicationShutdownHook]  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[TRACE] 2023-06-10 00:48:49.488 [SpringApplicationShutdownHook]  o.h.t.s.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@44103266] for TypeConfiguration
+[DEBUG] 2023-06-10 00:48:49.489 [SpringApplicationShutdownHook]  o.h.t.s.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@35e72699] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@44103266]
+[INFO ] 2023-06-10 00:48:50.042 [SpringApplicationShutdownHook]  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2023-06-10 00:48:50.355 [SpringApplicationShutdownHook]  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.

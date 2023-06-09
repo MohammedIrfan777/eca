@@ -1,0 +1,48 @@
+server:
+  port: 6092
+
+eca:
+  openapi:
+    dev-url: http://localhost:8080
+    prod-url: https://eca-api.com
+
+eureka:
+  client:
+    instance:
+      preferIpAddress: ${EUREKA_PREFER_IP:false}
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+logging:
+  file:
+    name: elk-stack.log
+    path: /logs/elk-stack.log
+  level:
+    org:
+      hibernate:
+        type: trace
+
+
+management:
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  application:
+    name: catalog-service
+  profiles:
+    active: dev
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true

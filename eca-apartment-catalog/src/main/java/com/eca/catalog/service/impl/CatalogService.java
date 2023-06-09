@@ -4,6 +4,8 @@ import java.lang.reflect.Type;
 import java.util.Date;
 import java.util.List;
 
+import com.eca.catalog.entity.Address;
+import com.eca.catalog.repository.AddressRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +27,10 @@ public class CatalogService implements ICatalogService {
 	private CatalogRepository catalogRepository;
 
 	@Autowired
-	private ModelMapper modelMapper;
+	private AddressRepository addressRepository;
+
+	@Autowired
+	ModelMapper modelMapper;
 
 	@SuppressWarnings("serial")
 	@Override
@@ -46,7 +51,10 @@ public class CatalogService implements ICatalogService {
 			log.info("inside the CatalogService::persistApartments");
 			Apartments pApartments = modelMapper.map(apartments, Apartments.class);
 			pApartments.setRegisterDate(new Date());
-			catalogRepository.save(pApartments);
+			Apartments perApart = catalogRepository.save(pApartments);
+			Address address = modelMapper.map(apartments.getAddress(), Address.class);
+			address.setApartments(perApart);
+			addressRepository.save(address);
 			log.info("insert success::persistApartments");
 			return 1;
 		} catch (Exception e) {

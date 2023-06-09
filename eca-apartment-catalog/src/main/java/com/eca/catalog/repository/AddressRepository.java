@@ -1,0 +1,10 @@
+package com.eca.catalog.repository;
+
+import com.eca.catalog.entity.Address;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface AddressRepository extends JpaRepository<Address, Long> {
+
+}

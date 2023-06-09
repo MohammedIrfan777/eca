@@ -2,8 +2,6 @@ package com.eca.catalog.controller;
 
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -37,7 +35,7 @@ public class CatalogController {
 	
 	@CrossOrigin
 	@PostMapping(value = "/v1/catalog/register")
-	public String persistApartments(@Valid @RequestBody ApartmentDto apartments) {
+	public String persistApartments(@RequestBody ApartmentDto apartments) {
 		log.info("register new apartment::persistApartments");
 		catalogService.persistApartments(apartments);
 		return "succesfully register !!!";

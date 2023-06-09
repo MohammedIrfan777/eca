@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${CONFIG_GIT_URI:git@github.com:vishabsingh09/configprops.git}
+          username: ${CONFIG_GIT_USERNAME:vishabsingh09}
+          password: ${CONFIG_GIT_TOKEN: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}
+          search-paths: { profile }
+          skipSslValidation: true
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: "*"

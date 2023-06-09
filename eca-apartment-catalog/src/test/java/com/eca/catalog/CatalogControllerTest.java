@@ -2,6 +2,7 @@ package com.eca.catalog;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -47,6 +48,7 @@ public class CatalogControllerTest {
 
 	@Test
 	public void test_getApartmentById_valid() {
+		ApartmentDto apartmentDto = getApartmentDto();
 		when(catalogService.getApartmentById(1)).thenReturn(getApartmentDto());
 		ApartmentDto response = catalogController.getApartmentById(1l);
 		assertNotNull(response);

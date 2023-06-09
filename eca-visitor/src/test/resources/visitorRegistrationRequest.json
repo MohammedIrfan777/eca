@@ -1,0 +1,12 @@
+{
+  "visitorFirstName":"TestVisitor",
+  "visitorLastName":"TestVisitor",
+  "visitorId": "VS03",
+  "visitorRequestId": "req03",
+  "visitorAddressLine":"Pratap Nagar",
+  "visitorCity":"Jaipur",
+  "visitorState":"Rajasthan",
+  "visitorZipCode":"302033",
+  "userPhoneNo":3242343211,
+  "purposeOfVisiting":"Meeting friend"
+}

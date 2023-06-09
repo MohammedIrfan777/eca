@@ -3,14 +3,7 @@ package com.eca.catalog.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
@@ -50,7 +43,7 @@ public class Apartments implements Serializable {
 	private Date registerDate;
 	
 	@JsonManagedReference
-	@OneToOne(mappedBy = "apartments", cascade = {CascadeType.ALL})
+	@OneToOne(fetch = FetchType.EAGER, mappedBy = "apartments", cascade = {CascadeType.ALL})
     private Address address;
 
 }

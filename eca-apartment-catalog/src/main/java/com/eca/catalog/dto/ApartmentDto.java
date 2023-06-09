@@ -13,6 +13,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ApartmentDto {
+
+	private Long apartmentId;
 	
 	@NotBlank
 	private String name;

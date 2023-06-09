@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    inetutils:
+      preferredNetworks: ${EUREKA_PREFERRED_NETWORKS:198.168}
+  datasource:
+    url: jdbc:postgresql://${APART_POSTGRES_URL:localhost}:5432/${APART_POSTGRES_DB:eca}
+    username: ${APART_POSTGRES_USER_NAME:postgres}
+    password: ${APART_POSTGRES_PASSWORD:password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true

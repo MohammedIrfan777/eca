@@ -1,0 +1,59 @@
+pipeline {
+    environment {
+        REGISTRY_NAME = "singhvishab/ecadiscovery"
+        APP_NAME= "eca-discovery"
+     }
+
+    agent any
+    tools {
+        maven "MAVEN_HOME"
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                cleanWs()
+                withCredentials([string(credentialsId: 'GITHUB_TOKEN_PS', variable: '')]) {
+                    git branch: 'main', url: 'https://github.com/vishabsingh09/eca-program.git'
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "mvn -f $APP_NAME/pom.xml clean install -DskipTests"
+            }
+        }
+
+         stage('Test & Code Coverage') {
+            steps {
+                sh "mvn -f $APP_NAME/pom.xml -Dmaven.test.failure.ignore=true clean package"
+            }
+             post {
+                success {
+                     archiveArtifacts 'eca-discovery/target/*.jar'
+                     junit 'eca-discovery/target/surefire-reports/*.xml'
+                     jacoco execPattern: 'eca-discovery/target/jacoco.exec'
+                }
+            }
+        }
+
+        stage('Building image') {
+          steps{
+            sh 'docker build -t $REGISTRY_NAME:$BUILD_NUMBER ./eca-discovery'
+          }
+        }
+
+        stage('Docker Build & Push') {
+            steps {
+                withDockerRegistry(credentialsId: 'DOCKER_HUB_USER_PS', url: '') {
+                    sh 'docker push $REGISTRY_NAME:$BUILD_NUMBER'
+                }
+            }
+        }
+    }
+
+    post {
+       always {
+           deleteDir()
+       }
+   }
+}

@@ -1,0 +1,16 @@
+{
+  "statusCode": 0,
+  "data": {
+    "id": 1,
+    "firstName": "TestVisitor",
+    "lastName": "TestVisitor",
+    "visitorId": "VS03",
+    "visitorRequestId": "req03",
+    "addressLine": "Pratap Nagar",
+    "city": "Jaipur",
+    "state": "Rajasthan",
+    "zipCode": "302033",
+    "userPhoneNo": 3242343211,
+    "purposeOfVisiting": "Meeting friend"
+  }
+}
