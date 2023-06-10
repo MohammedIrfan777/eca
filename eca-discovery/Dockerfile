@@ -6,4 +6,4 @@ ENV SECURITY_OPTS="-Djava.security.egd=file:/dev/./urandom"
 
 COPY entrypoint.sh ./
 RUN chmod 755 ./entrypoint.sh
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]

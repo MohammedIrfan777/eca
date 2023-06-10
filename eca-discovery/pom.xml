@@ -12,11 +12,12 @@
 	<artifactId>eca-discovery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eca-discovery</name>
+	<packaging>jar</packaging>
 	<description>Discovery Service</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
-		<docker.image.prefix>singhvishab</docker.image.prefix>
+		<docker.image.prefix>khazi123</docker.image.prefix>
 		<docker.image.suffix></docker.image.suffix>
 	</properties>
 	<dependencies>
