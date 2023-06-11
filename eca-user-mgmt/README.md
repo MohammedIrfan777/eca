@@ -1,6 +1,6 @@
-# ECA APARTMENT VISITOR SERVICE
+# ECA USER MANAGEMENT SERVICE
 
-This Application is to notify apartment owner, flat owner or tenants about any visitor visits.
+This Application is to register tenants, flat owners in the apartments services.
 
 ## Steps to Setup
 
@@ -14,17 +14,17 @@ git clone https://github.com/MohammedIrfan777/eca.git
 
 ```bash
 cd eca
-cd eca-visitor
+cd eca-user-mgmt
 mvn spring-boot:run
 ```
 
-That's it! The application can be accessed at `http://localhost:6093`.
+That's it! The application can be accessed at `http://localhost:6090`.
 
 You may also package the application in the form of a jar and then run the jar file like so -
 
 ```bash
 mvn clean package
-java -jar target/eca-visitor*.jar
+java -jar target/eca-user-mgmt*.jar
 ```
 
 # OR
@@ -32,7 +32,7 @@ java -jar target/eca-visitor*.jar
 Simply run the docker image container using docker
 
 ```bash
-docker build -t ecavisitor:latest .
-docker run -d -p 6094:6094 ecavisitor:latest
+docker build -t ecausermgmt:latest .
+docker run -d -p 6090:6090 ecausermgmt:latest
 ```
 
