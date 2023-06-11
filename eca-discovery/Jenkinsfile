@@ -1,7 +1,6 @@
 pipeline {
     environment {
-        REGISTRY_NAME = "singhvishab/ecadiscovery"
-        APP_NAME= "eca-discovery"
+        REGISTRY_NAME = "khazi123/ecausermgmt"
      }
 
     agent any
@@ -12,41 +11,54 @@ pipeline {
         stage('Checkout') {
             steps {
                 cleanWs()
-                withCredentials([string(credentialsId: 'GITHUB_TOKEN_PS', variable: '')]) {
-                    git branch: 'main', url: 'https://github.com/vishabsingh09/eca-program.git'
-                }
+                    git branch: 'main', url: 'https://github.com/MohammedIrfan777/user-management.git'
             }
         }
         stage('Build') {
             steps {
-                sh "mvn -f $APP_NAME/pom.xml clean install -DskipTests"
+                sh "mvn clean install -DskipTests"
             }
         }
 
          stage('Test & Code Coverage') {
             steps {
-                sh "mvn -f $APP_NAME/pom.xml -Dmaven.test.failure.ignore=true clean package"
+                sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
              post {
                 success {
-                     archiveArtifacts 'eca-discovery/target/*.jar'
-                     junit 'eca-discovery/target/surefire-reports/*.xml'
-                     jacoco execPattern: 'eca-discovery/target/jacoco.exec'
+                     archiveArtifacts 'target/*.jar'
+                     junit 'target/surefire-reports/*.xml'
+                     jacoco execPattern: 'target/jacoco.exec'
                 }
             }
         }
 
+        stage('SonarQube') {
+                  environment {
+                    scannerHome = tool 'SonarQube'
+                  }
+                  steps {
+                              script {
+                              sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=ecausermgmt: \
+                                                                  -Dsonar.projectName=ecausermgmt \
+                                                                  -Dsonar.projectVersion=1.0 \
+                                                                  -Dsonar.sources=src/ \
+                                                                  -Dsonar.java.binaries=target/classes/com/ps/mslife/controller/ \
+                                                                  -Dsonar.junit.reportsPath=target/surefire-reports/ \
+                                                                  -Dsonar.jacoco.reportsPath=target/jacoco.exec"
+                                                                  }
+                                    }
+             }
+
         stage('Building image') {
           steps{
-            sh 'docker build -t $REGISTRY_NAME:$BUILD_NUMBER ./eca-discovery'
+            sh 'docker build -t $REGISTRY_NAME:$BUILD_NUMBER .'
           }
         }
 
         stage('Docker Build & Push') {
             steps {
-                withDockerRegistry(credentialsId: 'DOCKER_HUB_USER_PS', url: '') {
-                    sh 'docker push $REGISTRY_NAME:$BUILD_NUMBER'
-                }
+                 sh 'docker push $REGISTRY_NAME:$BUILD_NUMBER'
             }
         }
     }
