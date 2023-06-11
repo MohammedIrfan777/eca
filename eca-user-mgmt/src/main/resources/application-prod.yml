@@ -1,9 +1,9 @@
 spring:
   config:
-    import: ${CONFIG_IMPORT_URL:configserver:http://localhost:8070}
+    import: ${CONFIG_IMPORT_URL:configserver:http://192.168.196.128:6090}
   cloud:
     config:
-      uri: ${CONFIG_SERVER_URL:localhost:8070}
+      uri: ${CONFIG_SERVER_URL:192.168.196.128:6090}
   kafka:
     producer:
       bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVER_URL:localhost:9094}

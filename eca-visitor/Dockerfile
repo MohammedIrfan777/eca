@@ -11,4 +11,4 @@ ENV MEMORY_OPTS=" -XX:+UseG1GC \
 
 COPY entrypoint.sh ./
 RUN chmod 755 ./entrypoint.sh
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]

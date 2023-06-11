@@ -1,0 +1,38 @@
+version: '3.0'
+services:
+  postgres:
+    container_name: postgres
+    hostname: postgres
+    image: postgres:15.2
+    user: root
+    environment:
+      - POSTGRES_DB=ECA_APARTMENT_DB,
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres-network
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4:7.0
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-test123}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - postgres-network
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - postgres-network
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+networks:
+  postgres-network:
+    driver: bridge

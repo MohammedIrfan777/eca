@@ -18,21 +18,19 @@ public class VisitorRegistrationController {
     @Autowired
     private VisitorRegistrationService visitorRegistrationService;
 
+    @CrossOrigin
     @PostMapping(path="registration",consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<VisitorRegistrationResponse> registration(@RequestBody VisitorDTO visitorDto) {
         log.info("Visitor Registration Controller");
         return visitorRegistrationService.visitorRegistration(visitorDto);
 
     }
-
-
+    @CrossOrigin
     @GetMapping("/checkApprovalStatus/{requestId}")
     public ResponseEntity<String> checkApprovalStatus(@PathVariable Long requestId)  {
         log.info("Checking Visitor Approval Status");
         //visitorRegistrationService.checkApprovalStatus(requestId);
         return ResponseEntity.ok("visitor request has been approved");
-
-
     }
 
 }

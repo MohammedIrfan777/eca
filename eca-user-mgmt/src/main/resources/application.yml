@@ -27,7 +27,7 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://192.168.196.128:8761/eureka}
 logging:
   level:
     root: INFO
@@ -63,4 +63,4 @@ feign:
         loggerLevel: BASIC
 
 catalog-service:
-  baseUrl: ${CATALOG_SERVICE_URL:http://localhost:8080}
+  baseUrl: ${CATALOG_SERVICE_URL:http://192.168.196.128:6092}

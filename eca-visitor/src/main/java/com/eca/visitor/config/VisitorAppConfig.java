@@ -67,8 +67,8 @@ public class VisitorAppConfig {
 
         License mitLicense = new License().name("PS License").url("https://eca.com/licenses/ps/");
 
-        Info info = new Info().title("Tutorial Management API").version("1.0").contact(contact)
-                .description("This API exposes endpoints to manage tutorials.")
+        Info info = new Info().title("Apartment Visitor Service").version("1.0").contact(contact)
+                .description("This API exposes endpoints to apartment vistors.")
                 .termsOfService("https://www.eca-academy.com/terms").license(mitLicense);
 
         return new OpenAPI().info(info).servers(List.of(devServer, prodServer));

@@ -3,7 +3,7 @@ server:
 
 eca:
   openapi:
-    dev-url: http://localhost:8080
+    dev-url: http://localhost:6092
     prod-url: https://eca-api.com
 
 eureka:
