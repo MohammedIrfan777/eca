@@ -47,12 +47,12 @@ docker-compose -f post-redis-pgadmin-docker-compose.yml up -d
 docker-compose -f kafka-grafana-promo-eca-services-app-docker-compose up -d
 ```
 After all services containers started access discovery server using your host and port(8761).
-<a>localhost:8761<a>
+[eureka](https://localhost:8761/)
 
 ## Swagger Setup
 
-After all services started access the swagger url using your host and port ex: <a>localhost:6090/swagger-ui/index.html/<a>
-
+After all services started access the swagger url using your host and port ex:
+[swagger](https://localhost:6090/swagger-ui/index.html/)
 ## Jenkins Setup
 
 Simply run the below docker cmds in your system
@@ -62,7 +62,7 @@ docker pull jenkins/jenkins:latest
 docker run -p 8080:8080 jenkins/jenkins:latest
 ```
 After jenkins container started access jenkins server using your host and port(8080).
-<a>localhost:8080<a>
+[jenkins](https://localhost:8080/)
 
 ## ELKF Setup
 
@@ -73,8 +73,8 @@ After changes just run the below docker compose cmd inside dockerComposeEKLF fol
 docker-compose -f docker-compose.yml up -d
 ```
 After all ELK containers started access elastic and kibana server using your host and port(9200, 5601).
-<a>localhost:9200<a>,
-<a>localhost:5601<a>
+[elastic](https://localhost:9200/)
+[kibana](https://localhost:5601/)
 
 
 
