@@ -1,7 +1,8 @@
 package com.eca.visitor.controller;
 
-import com.eca.visitor.dto.VisitorDTO;
+import com.eca.visitor.dto.VisitorRegistrationRequest;
 import com.eca.visitor.dto.response.VisitorRegistrationResponse;
+import com.eca.visitor.entity.Visitor;
 import com.eca.visitor.service.VisitorRegistrationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,28 +10,41 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+import javax.validation.Validator;
+import java.util.Set;
+
 @RestController
-@RequestMapping("/v1/visitor")
 @CrossOrigin
+@RequestMapping("/v1/visitor")
 @Slf4j
 public class VisitorRegistrationController {
 
     @Autowired
     private VisitorRegistrationService visitorRegistrationService;
 
-    @CrossOrigin
+    @Autowired
+    private Validator validator;
+
     @PostMapping(path="registration",consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<VisitorRegistrationResponse> registration(@RequestBody VisitorDTO visitorDto) {
-        log.info("Visitor Registration Controller");
-        return visitorRegistrationService.visitorRegistration(visitorDto);
+    public ResponseEntity<VisitorRegistrationResponse> registration(@RequestBody VisitorRegistrationRequest visitorRegistrationrequest) {
+        log.info("VisitorRegistrationController::registration request from UI {}");
+        Set<ConstraintViolation<VisitorRegistrationRequest>> constraintViolations = validator.validate(visitorRegistrationrequest);
+        if (!constraintViolations.isEmpty()) {
+            log.error("VisitorRegistrationController::registration constraintViolations errors list {}",constraintViolations);
+            throw new ConstraintViolationException(constraintViolations);
+        }
+        return visitorRegistrationService.visitorRegistration(visitorRegistrationrequest);
 
     }
-    @CrossOrigin
+
     @GetMapping("/checkApprovalStatus/{requestId}")
-    public ResponseEntity<String> checkApprovalStatus(@PathVariable Long requestId)  {
+    public ResponseEntity<String> checkApprovalStatus(@PathVariable String requestId)  {
         log.info("Checking Visitor Approval Status");
-        //visitorRegistrationService.checkApprovalStatus(requestId);
         return ResponseEntity.ok("visitor request has been approved");
+
+
     }
 
 }

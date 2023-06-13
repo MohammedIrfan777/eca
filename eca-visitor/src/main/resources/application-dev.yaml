@@ -12,10 +12,3 @@ spring:
     password:
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-
-logging:
-  level:
-    org.springframework.web: ERROR
-    com.eca.visitor: INFO
-    org.hibernate: ERROR
-    org.springframework.orm.jpa: INFO

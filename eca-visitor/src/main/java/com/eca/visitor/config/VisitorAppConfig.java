@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
-import utils.CommonUtils;
-import utils.JsonUtils;
+import com.eca.visitor.utils.CommonUtils;
+import com.eca.visitor.utils.JsonUtils;
 
 import io.swagger.v3.oas.models.servers.Server;
 
@@ -61,15 +61,15 @@ public class VisitorAppConfig {
         prodServer.setDescription("Server URL in Production environment");
 
         Contact contact = new Contact();
-        contact.setEmail("eca-academy@gmail.com");
-        contact.setName("eca academy");
-        contact.setUrl("https://www.eca-academy.com");
+        contact.setEmail("eca-visitor@gmail.com");
+        contact.setName("eca visitor");
+        contact.setUrl("https://www.eca-visitor.com");
 
         License mitLicense = new License().name("PS License").url("https://eca.com/licenses/ps/");
 
-        Info info = new Info().title("Apartment Visitor Service").version("1.0").contact(contact)
-                .description("This API exposes endpoints to apartment vistors.")
-                .termsOfService("https://www.eca-academy.com/terms").license(mitLicense);
+        Info info = new Info().title("ECA Visitor Management API").version("1.0").contact(contact)
+                .description("This API exposes endpoints to manage apartment visitors.")
+                .termsOfService("https://www.eca-visitor.com/terms").license(mitLicense);
 
         return new OpenAPI().info(info).servers(List.of(devServer, prodServer));
     }

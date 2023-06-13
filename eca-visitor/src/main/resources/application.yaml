@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ecavisitorservice
+    name: ecavisitor
   profileS:
     active: dev
   main:
@@ -10,7 +10,7 @@ spring:
       enabled: false
 
 server:
-  port: 6094
+  port: 6091
 
 management:
   endpoint:
@@ -26,9 +26,9 @@ management:
 app:
   visitor:
     kafka:
-      enabled: true
+      enabled: false
       topic:
-        name: ${VISITOR_REQ_TOPIC:visitor-to-notification}
+        name: ${VISITOR_REQ_TOPIC:visitor_req_to_notification}
         partitions: 1
         replica-factor: 1
   openapi:

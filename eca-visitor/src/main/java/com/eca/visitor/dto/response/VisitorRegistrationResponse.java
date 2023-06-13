@@ -1,31 +1,33 @@
 package com.eca.visitor.dto.response;
 
-import com.eca.visitor.dto.UserDTO;
-import com.eca.visitor.dto.VisitorDTO;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class VisitorRegistrationResponse{
+@AllArgsConstructor
+@NoArgsConstructor
+public class VisitorRegistrationResponse {
 
-    private String status;
-    private int statusCode;
+	public VisitorRegistrationResponse(VisitorResponse visitorResponse, LocalDateTime now) {
+		this.visitorResponse = visitorResponse;
+		this.timestamp = now;
+	}
 
-    private String statusMsg;
+	@JsonFormat(shape = JsonFormat.Shape.STRING)
+	protected LocalDateTime timestamp;
 
-    @JsonProperty("data")
-    private VisitorDTO responseDto;
+	protected String error;
+	@JsonProperty("data")
+	private VisitorResponse visitorResponse;
 
-    @JsonProperty("userData")
-    private UserDTO userDTO;
-
-    private String error;
+	private String status;
 
 
 }

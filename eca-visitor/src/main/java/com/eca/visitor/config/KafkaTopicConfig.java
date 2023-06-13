@@ -23,16 +23,12 @@ public class KafkaTopicConfig {
 
     @Value("${spring.kafka.producer.bootstrap-servers}")
     private String bootstrapAddress;
-
     @Value("${app.visitor.kafka.topic.name}")
     private String topicName;
-
     @Value("${app.visitor.kafka.topic.partitions}")
     private Integer numPartitions;
-
     @Value("${app.visitor.kafka.topic.replica-factor}")
     private int replicationFactor;
-
     @Bean
     public ProducerFactory<String,String> producerFactory() {
         Map<String,Object> configProp = new HashMap<>();
@@ -41,7 +37,6 @@ public class KafkaTopicConfig {
         configProp.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         return new DefaultKafkaProducerFactory<>(configProp);
     }
-
     @Bean
     public KafkaTemplate<String,String> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());

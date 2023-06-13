@@ -11,6 +11,8 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.UUID;
+import java.util.concurrent.atomic.AtomicLong;
 
 @Data
 @Entity
@@ -19,10 +21,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Visitor implements Serializable {
 
+    private static final AtomicLong counter = new AtomicLong(0);
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "visitorId")
+    private long visitorId;
     @Column(name = "createdOn",nullable = false,updatable = false)
     private LocalDateTime createdOn;
 
@@ -44,11 +48,6 @@ public class Visitor implements Serializable {
 
     @Column(name = "visitorLastName")
     private String visitorLastName;
-
-    @NotEmpty
-    @Column(name = "visitorId",unique = true)
-    private String visitorId;
-    @NotEmpty
     @Column(name = "visitorRequestId",unique = true)
     private String visitorRequestId;
     @Column(name = "visitorAddressLine")
@@ -82,13 +81,13 @@ public class Visitor implements Serializable {
     protected void setOnCreation() {
         createdOn = LocalDateTime.now();
         updatedOn = LocalDateTime.now();
+        visitorRequestId = "VREQ-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
     }
 
     @PreUpdate
     protected void setUpdatedOn() {
-        log.info("Update On Executed");
         updatedOn = LocalDateTime.now();
+        visitorRequestId = "VREQ-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
     }
-
 
 }
