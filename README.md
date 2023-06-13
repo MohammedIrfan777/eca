@@ -14,12 +14,10 @@ ECA APARTMENT SERVICES MVP1 Model
 - [Swagger UI](#swagger-setup)
 - [Jenkins Setup](#jenkins-setup)
 - [ELK Setup](#elkf-setup)
-- [Grafana Setup](#grafana-setup-)
-- [Sonar and NFR](#sonarqube-)
-- [DB Setup](#db-setup-)
-- [Docker Containers details](#docker-)
-- [Azure App Services](#azure-app-service-)
-- [Deployment Cluster](#deployment-)
+- [Grafana Setup](#grafana-setup)
+- [Sonar and NFR](#sonar-nfr)
+- [DB Setup](#db-setup)
+- [Stage and prod urls](#stage-prod-urls)
 - [Tools](#tools)
 
 ## Softwares Requirements
@@ -75,6 +73,46 @@ docker-compose -f docker-compose.yml up -d
 After all ELK containers started access elastic and kibana server using your host and port(9200, 5601).
 [elastic](https://localhost:9200/)
 [kibana](https://localhost:5601/)
+
+## Grafana Setup
+```bash
+docker-compose -f kafka-grafana-promo-eca-services-app-docker-compose up -d
+```
+Run the above docker compose file, all containers gets started along with grafana and prometheus.
+Grafana and prometheus can be accessible using below urls.
+[prometheus](https://localhost:9090/)
+[grafana](https://localhost:3000/)
+
+## Sonar NFR
+Install sonarqube plugin in jenkins whenever jenkins build started and successfully executed it generates the
+sonar NFR report shows scalability, reliability, vulnerabilities along with the code smells presents in the projects.
+To display sonar NFR report we need to have sonar server running in the system to
+to start sonar server in the system run the below docker cmd in the system.
+
+```bash
+docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+```
+after sonar server container started server can be accessible using below url.
+[sonar](https://localhost:9000/)
+
+## DB Setup
+After containers started using services docker compose file. DB can be accessible in below url
+[postgres](https://localhost:5050/)
+[H2](https://localhost:6090/h2-console/)
+login to the Database system and create the required DB to make run the apartment services up and running.
+required DB(ECA_APARTMENT_DB, ECA_VISITOR_DB, ECA_USER_DB).
+
+## Tools
+- Jenkins
+- Kibana
+- elasticsearch
+- postgres sql
+- pgAdmin
+- Intellij or STS
+
+
+
+
 
 
 

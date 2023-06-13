@@ -38,7 +38,7 @@ public class SwaggerOpenApiConfig {
 		License mitLicense = new License().name("PS License").url("https://eca.com/licenses/ps/");
 
 		Info info = new Info().title("ECA Apartment Management API").version("1.0").contact(contact)
-				.description("This API exposes endpoints to manage tutorials.")
+				.description("This API exposes endpoints to manage apartments services.")
 				.termsOfService("https://www.eca-academy.com/terms").license(mitLicense);
 
 		return new OpenAPI().info(info).servers(List.of(devServer, prodServer));
