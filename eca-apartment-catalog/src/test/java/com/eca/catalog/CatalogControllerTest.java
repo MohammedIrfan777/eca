@@ -8,10 +8,13 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -19,6 +22,7 @@ import com.eca.catalog.controller.CatalogController;
 import com.eca.catalog.dto.AddressDto;
 import com.eca.catalog.dto.ApartmentDto;
 import com.eca.catalog.service.impl.CatalogService;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest
@@ -29,6 +33,17 @@ public class CatalogControllerTest {
 
 	@Mock
 	private CatalogService catalogService;
+
+	@Spy
+	private ThreadPoolTaskExecutor spyTaskExecutor = new ThreadPoolTaskExecutor();
+
+	@Before
+	public void init() {
+		MockitoAnnotations.initMocks(this);
+		spyTaskExecutor.setCorePoolSize(1);
+		spyTaskExecutor.setWaitForTasksToCompleteOnShutdown(true);
+		spyTaskExecutor.initialize();
+	}
 
 	@Test
 	public void test_getApartments_valid() {

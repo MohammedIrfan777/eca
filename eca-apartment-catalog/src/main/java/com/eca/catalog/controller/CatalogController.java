@@ -3,6 +3,7 @@ package com.eca.catalog.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,10 +21,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Validated
 public class CatalogController {
-	
-	
+
 	@Autowired
 	private CatalogService catalogService;
+
+	@Autowired
+	ThreadPoolTaskExecutor taskExecutor;
 
 	@CrossOrigin
 	@GetMapping(value = "/v1/catalog/list")
@@ -37,7 +40,9 @@ public class CatalogController {
 	@PostMapping(value = "/v1/catalog/register")
 	public String persistApartments(@RequestBody ApartmentDto apartments) {
 		log.info("register new apartment::persistApartments");
-		catalogService.persistApartments(apartments);
+		taskExecutor.execute(() -> {
+			catalogService.persistApartments(apartments);
+		});
 		return "succesfully register !!!";
 	}
 	
