@@ -1,9 +1,14 @@
-FROM adoptopenjdk/openjdk11:jre-11.0.19_7-ubuntu
-ADD target/eca-apartment-catalog-*.jar app.jar
-ENV JAVA_OPTS=""
-ENV APP_NAME="ecaapartmentcatalog"
-ENV SECURITY_OPTS="-Djava.security.egd=file:/dev/./urandom"
+#FROM adoptopenjdk/openjdk11:jre-11.0.19_7-ubuntu
+#ADD target/eca-apartment-catalog-*.jar app.jar
+#ENV JAVA_OPTS=""
+#ENV APP_NAME="ecaapartmentcatalog"
+#ENV SECURITY_OPTS="-Djava.security.egd=file:/dev/./urandom"
+#
+#COPY entrypoint.sh ./
+#RUN chmod 755 ./entrypoint.sh
+#ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 
-COPY entrypoint.sh ./
-RUN chmod 755 ./entrypoint.sh
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+
+FROM adoptopenjdk/openjdk11:alpine-jre
+ADD target/eca-apartment-catalog-*.jar app.jar
+ENTRYPOINT ["java","-jar","app.jar"]

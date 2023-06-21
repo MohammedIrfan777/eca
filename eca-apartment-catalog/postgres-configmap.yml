@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: eca-configmap
+  labels:
+    app: eca-configmap
+data:
+  spring-profiles-active: prod
+  host: postgres
+  name: ECA_APARTMENT_DB
+
+#  eureka-uri: http://ecadiscovery:8761/eureka
+#  zipkin-uri: http://zipkin:9411
+#  swagger-ip-address: http://192.168.117.129:6090
+#  postgres-uri: 192.168.117.129
+#  config-import-url: optional:configserver:http://ecaconfigserver:8070
+#  config-server-url: http://ecaconfigserver:8070
+#  catalog-service-url: http://ecaapartment:6092

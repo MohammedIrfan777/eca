@@ -3,9 +3,12 @@ spring:
     inetutils:
       preferredNetworks: ${EUREKA_PREFERRED_NETWORKS:198.168}
   datasource:
-    url: jdbc:postgresql://${APART_POSTGRES_URL:localhost}:5432/${APART_POSTGRES_DB:eca}
-    username: ${APART_POSTGRES_USER_NAME:postgres}
-    password: ${APART_POSTGRES_PASSWORD:password}
+#    url: jdbc:postgresql://${APART_POSTGRES_URL:localhost}:5432/${APART_POSTGRES_DB:eca}
+#    username: ${APART_POSTGRES_USER_NAME:postgres}
+#    password: ${APART_POSTGRES_PASSWORD:password}
+    url: jdbc:postgresql://${DB_HOST}:5432/${DB_NAME}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect

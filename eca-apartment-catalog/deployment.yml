@@ -1,0 +1,59 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: catalog
+  labels:
+    name: catalog
+spec:
+  ports:
+    - nodePort: 30162
+      port: 6092
+      targetPort: 6092
+      protocol: TCP
+  selector:
+    app: catalog
+  type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog
+spec:
+  selector:
+    matchLabels:
+      app: catalog
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: catalog
+    spec:
+      containers:
+        - name: catalog
+          image: khazi123/catalog:1.0
+          ports:
+            - containerPort: 6092
+          env:   # Setting Enviornmental Variables
+            - name: DB_HOST   # Setting Database host address from configMap
+              valueFrom:
+                configMapKeyRef:
+                  name: eca-configmap  # name of configMap
+                  key: host
+            - name: DB_NAME  # Setting Database name from configMap
+              valueFrom:
+                configMapKeyRef:
+                  name: eca-configmap
+                  key: name
+            - name: POSTGRES_USER  # Setting Database username from Secret
+              valueFrom:
+                secretKeyRef:
+                  name: eca-secret # Secret Name
+                  key: postgres-user
+            - name: POSTGRES_PASSWORD # Setting Database password from Secret
+              valueFrom:
+                secretKeyRef:
+                  name: eca-secret
+                  key: postgres-password
+
+
