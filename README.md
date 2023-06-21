@@ -17,6 +17,7 @@ ECA APARTMENT SERVICES MVP1 Model
 - [Grafana Setup](#grafana-setup)
 - [Sonar and NFR](#sonar-nfr)
 - [DB Setup](#db-setup)
+- [Kubernetes Cluster](#kubernetes-cluster)
 - [Stage and prod urls](#stage-prod-urls)
 - [Tools](#tools)
 
@@ -101,6 +102,24 @@ After containers started using services docker compose file. DB can be accessibl
 [H2](https://localhost:6090/h2-console/)
 login to the Database system and create the required DB to make run the apartment services up and running.
 required DB(ECA_APARTMENT_DB, ECA_VISITOR_DB, ECA_USER_DB).
+
+## Kubernetes Cluster
+Download and install kubernetes on your local machines.
+Go to respective file folders and use below commands to executes the kubernetes deployment files
+#### secret.yml, postgress-cofigmap.yml, postgres-deployment.yml, deployment.yml
+
+```bash
+kubectl apply -f <file-name>
+```
+below commands to see the status in kubernetes cluster
+
+```bash
+kubectl get secrets
+kubectl get configmaps
+kubectl get deployments
+kubectl get services
+kubectl get pods
+```
 
 ## Tools
 - Jenkins
