@@ -34,8 +34,8 @@ ECA APARTMENT SERVICES MVP1 Model
 - mongo DB latest
 - kibana, elasticsearch, filebeats, logstash 7.17.0
 
-## Architectural Diagram
-<img alt="MVP1 model" src="eca-arch-diagram.jpg"> </img>
+## Architectural Diagram-
+<img alt="MVP1 model" src="eca-highlevel.jpg"> </img>
 
 ## Code Mode
 

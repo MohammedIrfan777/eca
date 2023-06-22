@@ -5112,3 +5112,9 @@ java.lang.RuntimeException: Exception
 [INFO ] 2023-06-21 19:48:15.321 [main]  o.s.b.a.e.w.EndpointLinksResolver - Exposing 16 endpoint(s) beneath base path '/actuator'
 [INFO ] 2023-06-21 19:48:15.417 [main]  c.e.c.CatalogControllerTest - Started CatalogControllerTest in 20.194 seconds (JVM running for 26.916)
 [INFO ] 2023-06-21 19:48:23.437 [main]  c.e.c.c.CatalogController - register new apartment::persistApartments
+[WARN ] 2023-06-21 22:35:38.697 [HikariPool-1 housekeeper]  c.z.h.p.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h47m35s660ms286µs600ns).
+[INFO ] 2023-06-21 22:35:39.287 [SpringApplicationShutdownHook]  o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl - HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+[TRACE] 2023-06-21 22:35:39.324 [SpringApplicationShutdownHook]  o.h.t.s.TypeConfiguration$Scope - Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@6dcc7696] for TypeConfiguration
+[DEBUG] 2023-06-21 22:35:39.327 [SpringApplicationShutdownHook]  o.h.t.s.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@731e76f4] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@6dcc7696]
+[INFO ] 2023-06-21 22:35:39.354 [SpringApplicationShutdownHook]  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[INFO ] 2023-06-21 22:35:39.426 [SpringApplicationShutdownHook]  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
